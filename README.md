@@ -49,3 +49,5 @@ In interest of time, below items are pending and can be covered in future:
    
 - Implementation of the hamburger icon in mobile view
 
+- Unit Tests for all components
+
