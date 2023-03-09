@@ -1,46 +1,51 @@
-# Getting Started with Create React App
+## Requirement
+To create a dashboard as per the [figma design](https://www.figma.com/file/KdCSTYw5RVjitKqvNLfSBW/Instill-Frontend-Project?node-id=0%3A1&t=HzBp3hnVNRdW0qeb-1). This will be built using React and TypeScript. The screen should be responsive and mobile-friendly.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Demo Screenshots
 
-## Available Scripts
+### Desktop
+![image](https://user-images.githubusercontent.com/18692751/224035894-acc055e0-8591-45e6-a29e-f4f105f10194.png)
 
-In the project directory, you can run:
 
-### `npm start`
+### Responsive in Desktop (when screen size changes)
+![image](https://user-images.githubusercontent.com/18692751/224036071-af205f3b-f28b-4152-a1ff-e528f4dcf1c8.png)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Mobile Friendly 
 
-### `npm test`
+We display the hamburger menu instead of the left nav (main menu)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![image](https://user-images.githubusercontent.com/18692751/224036386-49657a35-77dc-4441-8fc1-e7eb2c040a10.png)
 
-### `npm run build`
+![image](https://user-images.githubusercontent.com/18692751/224036335-e5632ffc-9588-4bbc-89f8-a1746d87eeba.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Oveview of folder structure
+There are four main folders:
+- assets: this contains all the images, icons, in svg or png
+- components: this contains all the common components, in addition to custom components as per figma design.
+  Each component has 4 main files:
+   - `<COMPONENT_NAME>.tsx`: this is the main component 
+   - `<COMPONENT_NAME>.styled.ts`: this contains all the `styled-components` used to build the component from scratch
+   - `utils.tsx`: this contains all extra utility methods or components
+   - `types.ts`: this contains all custom typescript types
+- screens: this contains all the ui screens (in this case, only one screen which is dashboard)
+- theme: this contains the theme for the overall app, implemented using `styled-system` library
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## What is pending and can be covered in future scope
+In interest of time, below items are pending and can be covered in future: 
+- Themes: 
+   - currently only covers `fontSize`, `fontFamily`, `fontStyle`, `fontWeights`, `lineHeights`, and `letterSpacing`. Since similar font is used in the entire app, thus setting up the theme helps in improving the readability and reducing the redundant work.
+   - in future, themes will also include `color`, `borders`, `mediaQueries`, `widths`, etc. 
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- Components: this folder will be more structured, and will contain 2 sub-folders: 
+   - basic components
+   - custom components
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- These components are yet to implemented (currently svgs are being used in the project): 
+   - Main menu: storage status, logged user info, account info, 
+   - Dashboard: satisfaction rate graph, work summary graph, progress bar
+   
+- Implementation of the hamburger icon in mobile view
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
