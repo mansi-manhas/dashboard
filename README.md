@@ -51,3 +51,5 @@ In interest of time, below items are pending and can be covered in future:
 
 - Unit Tests for all components
 
+- Plug ESLint for high-quality code
+
